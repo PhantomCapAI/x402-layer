@@ -5,6 +5,6 @@ const RPC_DEFAULTS: Record<string, string> = { devnet: 'https://api.devnet.solan
 function optEnv(key: string, fb: string): string { return process.env[key] || fb; }
 export function loadConfig(): X402Config {
  const network = optEnv('X402_NETWORK', 'devnet') as NetworkMode;
- return { network, solanaRpcUrl: optEnv('SOLANA_RPC_URL', RPC_DEFAULTS[network]), facilitatorUrl: optEnv('X402_FACILITATOR_URL', 'https://x402.org/facilitator'), phoebeTreasuryAddress: optEnv('PHOEBE_TREASURY_ADDRESS', '6yWyamHsquiUHvuBnKkgFbS57xhnX42EAcVibnK6apEa'), phantomTreasuryWallet: optEnv('PHANTOM_TREASURY_WALLET', 'CGzf9GUK8DYd2kze7CKhEU2Hmr6kTifueYaWJ1SWekVc'), usdcMint: USDC_MINTS[network], port: parseInt(optEnv('PORT', '8402'), 10), host: optEnv('HOST', '0.0.0.0') };
+ return { network, solanaRpcUrl: optEnv('SOLANA_RPC_URL', RPC_DEFAULTS[network]), facilitatorUrl: optEnv('X402_FACILITATOR_URL', 'https://x402.org/facilitator'), phoebeTreasuryAddress: optEnv('PHOEBE_TREASURY_ADDRESS', 'HmW2bQeLpJv3FJrSBV1jeyra2oof5rq6uBkB1cSLnSAK'), phantomTreasuryWallet: optEnv('PHANTOM_TREASURY_WALLET', 'HmW2bQeLpJv3FJrSBV1jeyra2oof5rq6uBkB1cSLnSAK'), usdcMint: USDC_MINTS[network], port: parseInt(optEnv('PORT', '8402'), 10), host: optEnv('HOST', '0.0.0.0') };
 }
 export const SOLANA_CAIP2: Record<string, string> = { devnet: 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1', mainnet: 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp' };
